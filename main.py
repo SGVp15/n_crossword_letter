@@ -20,6 +20,8 @@ if __name__ == '__main__':
     words = words.strip()
     words = words.split('\n')
     words = list(map(str.upper, words))
+    words = [x for x in words if x]
+
     max_len_word = max(len(x) for x in words)
     max_kross = max(max_len_word, len(words))
     while max_kross > len(words):
